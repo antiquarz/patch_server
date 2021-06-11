@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStoredDataTable extends Migration
+class CreatePatternTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateStoredDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('stored_data', function (Blueprint $table) {
+        Schema::create('patterns', function (Blueprint $table) {
             $table->id();
-            $table->integer('temperature');
-            $table->integer('humidity');
-            $table->integer('light');
+            $table->integer('user');
+            $table->string('message');
+            $table->string('pattern');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateStoredDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stored_data');
+        Schema::dropIfExists('sensorData');
     }
 }

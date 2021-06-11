@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SensorData extends Model
+class Pattern extends Model
 {
 
     /**
@@ -13,7 +13,7 @@ class SensorData extends Model
      * @var array
      */
     protected $fillable = [
-        'temperature', 'humidity', 'light', 'soil_moisture', 'air_quality'
+        'user', 'message', 'pattern'
     ];
 
     /**

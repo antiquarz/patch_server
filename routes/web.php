@@ -13,6 +13,5 @@
 |
 */
 
-$router->get('/',['uses' => 'SensorDataController@show']);
-$router->get('/limited',['uses' => 'SensorDataController@showLimited']);
-$router->post('/',['uses' => 'SensorDataController@create']);
+$router->get('/',['uses' => 'PatternController@show']);
+$router->post('/',['uses' => 'PatternController@create']);
